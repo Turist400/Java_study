@@ -13,11 +13,11 @@ public class PointProgramm {
 
     double dx = p1.x - p2.x;
     double dy = p1.y - p2.y;
-    System.out.println("distance between points " + p1 + " и " + p2 + " = " + distance(dx, dy));
+    System.out.println("distance between points " + dx + " и " + dy + " = " + distance(dx, dy));
 
   }
 
-  public static double distance(double pu1, double pu2) {
-    return Math.sqrt(pu1 + pu2);
+  public static double distance(double p1, double p2) {
+    return Math.sqrt(p1*p1 + p2*p2);
   }
 }

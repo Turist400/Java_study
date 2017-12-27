@@ -3,7 +3,7 @@ package ru.stqa.pft.sandbox;
 public class MyFirstProgramm {
   public static void main(String[] args) {
 
-    Square s = new Square();
+    Square s = new Square(5);
     s.l = 5;
     System.out.println("площадь квадрата со стороной " + s.l + " = " + area(s));
 

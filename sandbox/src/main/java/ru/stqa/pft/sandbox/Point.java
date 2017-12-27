@@ -1,14 +1,20 @@
 package ru.stqa.pft.sandbox;
 
+import java.util.Locale;
+
 public class Point {
 
     public double x;
     public double y;
 
-    public Point() {
+    public Point(double x, double y) {
 
-        //this.x = 0;
-        //this.y = 0;
+        this.x = x;
+        this.y = y;
+    }
+    @Override
+    public String toString () {
+        return String.format (Locale.US,"(%.1f;%.1f)", x, y );
     }
 
     public double distance(Point p) {

@@ -3,15 +3,11 @@
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../sandbox">
-      <sourceFolder url="file://$MODULE_DIR$/../../sandbox/src/main/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../sandbox/src/test/java" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/../../sandbox/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/../../sandbox/build" />
       <excludeFolder url="file://$MODULE_DIR$/../../sandbox/out" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Gradle: com.beust:jcommander:1.72" level="project" />
-    <orderEntry type="library" name="Gradle: org.testng:testng:6.13.1" level="project" />
   </component>
 </module>

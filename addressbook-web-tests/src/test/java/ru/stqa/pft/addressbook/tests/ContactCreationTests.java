@@ -13,7 +13,7 @@ public class ContactCreationTests extends TestBase {
   @Test
   public void testContactCreation() {
     //app.getContactHelper().createContact(new ContactData("Ivan", "Ivanov", "123456789", "ivanov@mail.ru", "Moscow, Lenina st.", "test1"), true);
-    app.getContactHelper().goHomePage();
+    //app.getContactHelper().goHomePage();
     List<ContactData> before = app.getContactHelper().getContactList();
     app.getContactHelper().initContactCreation();
     ContactData contact = new ContactData("Ivan", "Ivanov", "123456789", "ivanov@mail.ru", "Moscow, Lenina st.", "test1");
@@ -25,7 +25,7 @@ public class ContactCreationTests extends TestBase {
     Assert.assertEquals(after.size(), before.size());
 
     before.add(contact);
-    Comparator<? super ContactData> byId = (c1, c2) -> Integer.compare(c1.getId(), c2.getId());
+    Comparator<? super ContactData> byId = Comparator.comparingInt(ContactData::getId);
     before.sort(byId);
     after.sort(byId);
     Assert.assertEquals(before, after);

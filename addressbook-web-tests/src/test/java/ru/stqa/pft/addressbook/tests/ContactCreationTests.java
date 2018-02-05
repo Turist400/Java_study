@@ -22,7 +22,7 @@ public class ContactCreationTests extends TestBase {
     app.getContactHelper().goHomePage();
 
     List<ContactData> after = app.getContactHelper().getContactList();
-    Assert.assertEquals(after.size(), before.size());
+    Assert.assertEquals(after.size(), before.size() + 1);
 
     before.add(contact);
     Comparator<? super ContactData> byId = Comparator.comparingInt(ContactData::getId);

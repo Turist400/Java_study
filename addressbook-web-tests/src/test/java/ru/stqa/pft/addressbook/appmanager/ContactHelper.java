@@ -53,9 +53,8 @@ public class ContactHelper extends HelperBase {
     wd.switchTo().alert().accept();
   }
 
-  public void initEdit(int i) {
-    click(By.xpath(".//td[8]/a/img"));
-
+  public void initEdit(int index) {
+    wd.findElements(By.xpath(".//td[8]/a/img")).get(index).click();
   }
 
   public void submitUpdate() {

@@ -46,23 +46,21 @@ public class ApplicationManager {
     wd.quit();
   }
 
-  public GroupHelper getGroupHelper() {
+  public GroupHelper group() {
     return groupHelper;
   }
 
-  public NavigationHelper getNavigationHelper() {
+  public NavigationHelper goTo() {
     return navigationHelper;
   }
 
   public void gotoGroupPage() {
-    navigationHelper.gotoGroupPage();
+    navigationHelper.groupPage();
   }
 
   public void returnToHomePage() {
     navigationHelper.returnToHomePage();
   }
 
-  public ContactHelper getContactHelper() {
-    return contactHelper;
-  }
+  public ContactHelper getContactHelper() { return contactHelper;  }
 }

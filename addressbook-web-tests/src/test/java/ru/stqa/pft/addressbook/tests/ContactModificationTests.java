@@ -14,20 +14,18 @@ public class ContactModificationTests extends TestBase {
   @BeforeMethod
   public void ensurePreconditions(){
     app.getContactHelper().goHomePage();
-    if (! app.getContactHelper().IsThereAContact()) {
-      app.getContactHelper().createContact
-              ((new ContactData("Ivan", "Ivanov", "123456789", "ivanov@mail.ru", "Moscow, Lenina st.", "test1")), true);
+    if (app.getContactHelper().list().size() == 0) {
+      app.getContactHelper().create((new ContactData("Ivan", "Ivanov", "123456789", "ivanov@mail.ru", "Moscow, Lenina st.", "test1")), true);
     }
   }
 
   @Test
   public void testContactModificatiom() throws InterruptedException {
-    List<ContactData> before = app.getContactHelper().getContactList();
+    List<ContactData> before = app.getContactHelper().list();
     int index = before.size() - 1;
     ContactData contact = new ContactData(before.get(index).getId(),"Ivan12", "Ivanov33", "123456789", "ivanov@mail.ru", "Moscow, Lenina st.", "test1");
-    app.getContactHelper().modifyContact(index, contact);
-
-    List<ContactData> after = app.getContactHelper().getContactList();
+    app.getContactHelper().modify(index, contact);
+    List<ContactData> after = app.getContactHelper().list();
     Assert.assertEquals(after.size(), before.size());
 
 
